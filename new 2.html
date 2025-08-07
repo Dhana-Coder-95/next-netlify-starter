@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Algovistas Strategy</title>
+  <style>
+  background-color: #e0d4fc; /* soft purple */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    a {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 20px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    h1 {
+      color: #4B0082;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    .highlight {
+      background-color: #ffff99; /* light yellow */
+      font-weight: bold;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://www.youtube.com/watch?v=Ha5zFVE2Bpc" target="_blank">▶️ For full video click here</a>
+
+  <h1>Algo Trading Strategy - Algovistas</h1>
+
+  <ul>
+    <li><strong>Entry Timings:</strong> <span class="highlight">9:16 AM onwards</span></li>
+    <li><strong>Underlying:</strong> <span class="highlight">Nifty</span></li>
+    <li><strong>Order Type:</strong> <span class="highlight">MIS</span></li>
+    <li><strong>Option Contracts:</strong> <span class="highlight">Current Week</span></li>
+  </ul>
+
+  <h3>Strategy Logic:</h3>
+  <ul>
+    <li>Buy <span class="highlight">ATM CE</span> and <span class="highlight">ATM PE</span> at <span class="highlight">9:16 AM</span></li>
+    <li><strong>Stop Loss:</strong> <span class="highlight">10 points</span> in options on each leg</li>
+    <li>If SL is hit, re-enter the <span class="highlight">same leg</span> when price reaches <span class="highlight">initial entry price</span>, with <span class="highlight">10-point SL</span> again</li>
+    <li>This SL-reentry cycle runs in a <span class="highlight">loop</span></li>
+  </ul>
+
+  <h3>Universal Exit Conditions:</h3>
+  <ul>
+    <li>Time-based Exit: <span class="highlight">3:15 PM</span></li>
+    <li>MTM Stop Loss:<span class="highlight">10000 for 1 lot</span></li>
+    <li>MTM Target :<span class="highlight">10000 for 1 lot</span></li>
+  </ul>
+
+</body>
+</html>
+
+
